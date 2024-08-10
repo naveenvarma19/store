@@ -4,12 +4,72 @@
 >
   <mat-drawer mode="side" opened class="p-6">
     <app-filters (showCategory)="onShowCategory($event)"></app-filters>
-    {{ category }}
   </mat-drawer>
   <mat-drawer-content class="p-6">
     <app-products-header
       (columnCountChange)="onColumnsCountChange($event)"
     ></app-products-header>
-    {{ cols }}
+    <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box
+          class="w-full"
+          [fullWidthMode]="cols === 1"
+        ></app-product-box>
+      </mat-grid-tile>
+    </mat-grid-list>
   </mat-drawer-content>
 </mat-drawer-container>
